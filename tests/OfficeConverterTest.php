@@ -1,24 +1,25 @@
 <?php
 /**
- * office-converter
+ * office-converter.
  *
  * Author:  Chukwuemeka Nwobodo (jcnwobodo@gmail.com)
  * Date:    11/13/2016
  * Time:    12:49 AM
  **/
 
-use NcJoes\OfficeConverter\OfficeConverter;
+namespace OfficeConverterTest;
+
+use OfficeConverter\OfficeConverter;
 use PHPUnit\Framework\TestCase;
 
 class OfficeConverterTest extends TestCase
 {
-    /**
-     * @var OfficeConverter $converter
-     */
+    /** @var OfficeConverter */
     private $converter;
+    /** @var string */
     private $outDir;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -37,21 +38,29 @@ class OfficeConverterTest extends TestCase
         $this->converter = new OfficeConverter($file, $this->outDir);
     }
 
-    public function testDocxToPdfConversion()
+    public function testDocxToPdfConversion(): void
     {
         $output = $this->converter->convertTo('result1.pdf');
 
-        $this->assertFileExists($output);
+        $this->assertNotNull($output);
 
-        unlink($output);
+        if (null !== $output) {
+            $this->assertFileExists($output);
+
+            unlink($output);
+        }
     }
 
-    public function testDocxToHtmlConversion()
+    public function testDocxToHtmlConversion(): void
     {
         $output = $this->converter->convertTo('result1.html');
 
-        $this->assertFileExists($output);
+        $this->assertNotNull($output);
 
-        unlink($output);
+        if (null !== $output) {
+            $this->assertFileExists($output);
+
+            unlink($output);
+        }
     }
 }
