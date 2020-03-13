@@ -1,0 +1,23 @@
+language: php
+
+php:
+    - 7.2
+    - 7.3
+    - 7.4
+
+cache:
+    directories:
+        - $HOME/.composer/cache
+        - .php-cs.cache
+
+before_install:
+    - sudo apt-get install libreoffice
+
+before_script:
+    - composer self-update
+    - travis_wait composer install
+
+script:
+    - ./vendor/bin/php-cs-fixer fix --diff --verbose --dry-run src
+    - ./vendor/bin/phpstan analyze src
+    - ./vendor/bin/phpunit --verbose

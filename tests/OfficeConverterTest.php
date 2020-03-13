@@ -26,6 +26,14 @@ class OfficeConverterTest extends TestCase
         $file = __DIR__."{$DS}sources{$DS}test1.docx";
         $this->outDir = __DIR__."{$DS}results";
 
+        if (file_exists($this->outDir.'/result1.html')) {
+            unlink($this->outDir.'/result1.html');
+        }
+
+        if (file_exists($this->outDir.'/result1.pdf')) {
+            unlink($this->outDir.'/result1.pdf');
+        }
+
         $this->converter = new OfficeConverter($file, $this->outDir);
     }
 
@@ -34,6 +42,8 @@ class OfficeConverterTest extends TestCase
         $output = $this->converter->convertTo('result1.pdf');
 
         $this->assertFileExists($output);
+
+        unlink($output);
     }
 
     public function testDocxToHtmlConversion()
@@ -41,5 +51,7 @@ class OfficeConverterTest extends TestCase
         $output = $this->converter->convertTo('result1.html');
 
         $this->assertFileExists($output);
+
+        unlink($output);
     }
 }
