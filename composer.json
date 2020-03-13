@@ -19,8 +19,8 @@
     },
     "autoload" : {
         "psr-4" : {
-            "OfficeConverter\\OfficeConverter\\" : "src/OfficeConverter",
-            "OfficeConverter\\OfficeConverterTest\\" : "tests"
+            "OfficeConverter\\" : "src/OfficeConverter",
+            "OfficeConverter\\" : "tests"
         }
     },
     "minimum-stability" : "stable"
