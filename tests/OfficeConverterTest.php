@@ -7,9 +7,9 @@
  * Time:    12:49 AM
  **/
 
-namespace NcJoes\OfficeConverterTest;
+namespace OfficeConverterTest;
 
-use NcJoes\OfficeConverter\OfficeConverter;
+use OfficeConverter\OfficeConverter;
 use PHPUnit\Framework\TestCase;
 
 class OfficeConverterTest extends TestCase

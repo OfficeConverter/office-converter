@@ -1,5 +1,5 @@
 {
-    "name" : "OfficeConverter/office-converter",
+    "name" : "officeconverter/office-converter",
     "description" : "PHP Wrapper for LibreOffice",
     "keywords" : ["Office","Converter"],
     "license" : "MIT",
@@ -20,7 +20,7 @@
     "autoload" : {
         "psr-4" : {
             "OfficeConverter\\" : "src/OfficeConverter",
-            "OfficeConverter\\" : "tests"
+            "OfficeConverterTest\\" : "tests"
         }
     },
     "minimum-stability" : "stable"
