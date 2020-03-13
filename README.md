@@ -1,4 +1,4 @@
-# Office Converter
+# Office Converter [![Build Status](https://travis-ci.org/OfficeConverter/office-converter.svg?branch=master)](https://travis-ci.org/OfficeConverter/office-converter)
 #### PHP Wrapper for LibreOffice
 
 Convert offices files to PDF and HTML using LibreOffice or OpenOffice.
