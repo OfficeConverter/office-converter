@@ -1,5 +1,5 @@
 {
-    "name" : "ncjoes/office-converter",
+    "name" : "OfficeConverter/office-converter",
     "description" : "PHP Wrapper for LibreOffice",
     "keywords" : ["Office","Converter"],
     "license" : "MIT",
@@ -19,7 +19,8 @@
     },
     "autoload" : {
         "psr-4" : {
-            "NcJoes\\OfficeConverter\\" : "src/OfficeConverter"
+            "OfficeConverter\\OfficeConverter\\" : "src/OfficeConverter",
+            "OfficeConverter\\OfficeConverterTest\\" : "tests"
         }
     },
     "minimum-stability" : "stable"
