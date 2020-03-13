@@ -22,7 +22,7 @@ It is recommended to install OfficeConverter through [Composer](http://getcompos
 Run this command within your project directory
 
 ```shell
-composer require ncjoes/office-converter
+composer require officeconverter/office-converter
 ```
 
 ### Dependencies
@@ -35,7 +35,7 @@ Here are some samples.
 ```php
 <?php
 // if you are using composer, just use this
-use NcJoes\OfficeConverter\OfficeConverter;
+use OfficeConverter\OfficeConverter;
 
 $converter = new OfficeConverter('test-file.docx');
 $converter->convertTo('output-file.pdf'); //generates pdf file in same directory as test-file.docx
